@@ -1,6 +1,10 @@
 import { ISVGProps } from '../interfaces/svg-props.interface'
 
-export const InstagramIcon = ({ color = 'none', width, height }: ISVGProps) => {
+export const InstagramIcon = ({
+  color = 'none',
+  width,
+  height,
+}: ISVGProps): JSX.Element => {
   return (
     <svg
       width={width || '24px'}

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Header } from './components/Header'
 
-function App() {
+function App(): JSX.Element {
   const nameInputRef = useRef<HTMLInputElement>(null)
   useEffect(() => {
     nameInputRef.current?.focus()

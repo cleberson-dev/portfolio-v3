@@ -36,7 +36,7 @@ const socialMediaProps = {
   height: socialMediaIconSize,
 }
 
-export const Header = () => {
+export const Header = (): JSX.Element => {
   return (
     <header className="flex justify-between items-center">
       <h1 className="font-semibold text-2xl">
