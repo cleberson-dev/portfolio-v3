@@ -1,33 +1,7 @@
-import cls from 'classnames'
 import { GithubIcon } from '../icons/Github.icon'
 import { InstagramIcon } from '../icons/Instagram.icon'
 import { LinkedinIcon } from '../icons/Linkedin.icon'
-
-type NavBarProps = {
-  items: {
-    title: string
-    link: string
-  }[]
-}
-
-const NavBar = ({ items }: NavBarProps): JSX.Element => {
-  return (
-    <nav>
-      {items.map((item, idx) => {
-        const isNotLast = idx < items.length
-        const classes = cls({
-          'font-semibold': true,
-          'mr-10': isNotLast,
-        })
-        return (
-          <a key={item.link} className={classes} href={item.link}>
-            {item.title}
-          </a>
-        )
-      })}
-    </nav>
-  )
-}
+import { Navbar } from './Navbar'
 
 const socialMediaIconSize = '36px'
 const socialMediaProps = {
@@ -42,7 +16,7 @@ export const Header = (): JSX.Element => {
       <h1 className="font-semibold text-2xl">
         cleberson<span style={{ color: '#F72585' }}>.dev</span>
       </h1>
-      <NavBar
+      <Navbar
         items={[
           { link: '#', title: 'sobre mim' },
           { link: '#', title: 'techs' },
