@@ -10,8 +10,8 @@ type NavbarProps = {
 export const Navbar = ({ items }: NavbarProps): JSX.Element => {
   return (
     <nav>
-      {items.map((item, idx) => (
-        <NavbarItem key={item.link} isNotLast={idx < items.length} {...item} />
+      {items.map((item) => (
+        <NavbarItem key={item.link} {...item} />
       ))}
     </nav>
   )

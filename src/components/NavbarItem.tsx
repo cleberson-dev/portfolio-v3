@@ -1,24 +1,12 @@
-import cls from 'classnames'
-
 type NavbarItemProps = {
   title: string
   link: string
-  isNotLast?: boolean
 }
 
-export const NavbarItem = ({
-  title,
-  link,
-  isNotLast,
-}: NavbarItemProps): JSX.Element => {
-  const classes = cls({
-    'font-semibold': true,
-    'mr-10': isNotLast,
-  })
-
+export const NavbarItem = ({ title, link }: NavbarItemProps): JSX.Element => {
   return (
-    <a className={classes} href={link}>
-      {title}
+    <a className="font-semibold nav-item" href={link}>
+      <span className="hover:opacity-30">{title}</span>
     </a>
   )
 }
