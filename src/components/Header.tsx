@@ -1,15 +1,12 @@
-import { GithubIcon } from '../icons/Github.icon'
-import { InstagramIcon } from '../icons/Instagram.icon'
-import { LinkedinIcon } from '../icons/Linkedin.icon'
 import { Logo } from './Logo'
 import { Navbar } from './Navbar'
+import { SocialMediaProps, SociaMedia } from './SocialMedia'
 
-const socialMediaIconSize = '36px'
-const socialMediaProps = {
-  color: 'white',
-  width: socialMediaIconSize,
-  height: socialMediaIconSize,
-}
+const socials: SocialMediaProps[] = [
+  { type: 'github', link: '' },
+  { type: 'linkedin', link: '' },
+  { type: 'instagram', link: '' },
+]
 
 export const Header = (): JSX.Element => {
   return (
@@ -23,15 +20,9 @@ export const Header = (): JSX.Element => {
         ]}
       />
       <div className="flex">
-        <a href="#" className="mr-4">
-          <GithubIcon {...socialMediaProps} />
-        </a>
-        <a href="#" className="mr-4">
-          <LinkedinIcon {...socialMediaProps} />
-        </a>
-        <a href="#">
-          <InstagramIcon {...socialMediaProps} />
-        </a>
+        {socials.map((social) => (
+          <SociaMedia key={social.type} {...social} />
+        ))}
       </div>
     </header>
   )
