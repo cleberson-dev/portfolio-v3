@@ -1,5 +1,18 @@
 import { useEffect, useRef } from 'react'
 
+const classes = {
+  container: 'w-full mt-20',
+  title: 'text-7xl font-bold text-left',
+  description: 'text-4xl font-medium mt-8',
+  input: [
+    'font-bold max-w-md bg-transparent',
+    'focus-within:outline-none',
+    'border-b-4 border-white border-solid',
+  ].join(' '),
+}
+
+const pinkTextStyles = { color: '#F72585' }
+
 export const MainSection = (): JSX.Element => {
   const nameInputRef = useRef<HTMLInputElement>(null)
   useEffect(() => {
@@ -7,20 +20,20 @@ export const MainSection = (): JSX.Element => {
   }, [])
 
   return (
-    <main className="w-full mt-20">
-      <h1 className="text-7xl font-bold text-left">
+    <main className={classes.container}>
+      <h1 className={classes.title}>
         Olá,{' '}
         <input
           ref={nameInputRef}
           type="text"
-          className="font-bold max-w-md bg-transparent border-b-4 border-white border-solid focus-within:outline-none"
-          style={{ color: '#F72585' }}
+          className={classes.input}
+          style={pinkTextStyles}
         />{' '}
         !
       </h1>
-      <p className="text-4xl font-medium mt-8">
-        Meu nome é <span style={{ color: '#F72585' }}>Cleberson Jr.</span> e
-        desenvolvo para a <span style={{ color: '#F72585' }}>web</span>.
+      <p className={classes.description}>
+        Meu nome é <span style={pinkTextStyles}>Cleberson Jr.</span> e
+        desenvolvo para a <span style={pinkTextStyles}>web</span>.
       </p>
     </main>
   )
