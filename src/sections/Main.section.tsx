@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 
 const classes = {
-  container: 'w-full mt-20',
+  container: 'w-full mt-20 h-screen',
   title: 'text-7xl font-bold text-left',
   description: 'text-4xl font-medium mt-8',
   input: [
