@@ -1,6 +1,7 @@
 import { GithubIcon } from '../icons/Github.icon'
 import { InstagramIcon } from '../icons/Instagram.icon'
 import { LinkedinIcon } from '../icons/Linkedin.icon'
+import { Logo } from './Logo'
 import { Navbar } from './Navbar'
 
 const socialMediaIconSize = '36px'
@@ -13,9 +14,7 @@ const socialMediaProps = {
 export const Header = (): JSX.Element => {
   return (
     <header className="flex justify-between items-center">
-      <h1 className="font-semibold text-2xl">
-        cleberson<span style={{ color: '#F72585' }}>.dev</span>
-      </h1>
+      <Logo />
       <Navbar
         items={[
           { link: '#', title: 'sobre mim' },
