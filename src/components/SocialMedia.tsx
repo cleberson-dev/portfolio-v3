@@ -9,7 +9,10 @@ export type SocialMediaProps = {
   link?: string
 }
 
-export const SociaMedia = ({ type, link = '#' }: SocialMediaProps) => {
+export const SociaMedia = ({
+  type,
+  link = '#',
+}: SocialMediaProps): JSX.Element => {
   const Icon = {
     github: GithubIcon,
     instagram: InstagramIcon,
