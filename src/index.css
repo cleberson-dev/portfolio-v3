@@ -28,3 +28,14 @@ code {
   background-color: white;
   margin: 0 28px;
 }
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #10002b transparent transparent transparent;
+}

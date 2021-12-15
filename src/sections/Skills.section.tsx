@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Tooltip } from '../components/Tooltip'
 import {
   AngularIcon,
   CSSIcon,
@@ -160,8 +161,16 @@ export const SkillsSection = () => {
     <section className="h-screen">
       <h1 className="lowercase font-bold text-3xl">Minhas Techs</h1>
       <ul className="flex mt-28 flex-wrap justify-between">
-        {skills.map(({ id, Icon, label, link, hovered, hoverColor }, idx) => (
-          <li key={label}>
+        {skills.map(({ id, Icon, label, link, hovered, hoverColor }) => (
+          <li key={label} className="relative">
+            <div
+              className={
+                'flex w-full absolute -top-12 justify-center items-center text-center ' +
+                (hovered ? 'block' : 'hidden')
+              }
+            >
+              <Tooltip label={label} />
+            </div>
             <a
               href={link}
               onMouseOver={() => hoverSkill(id)}
