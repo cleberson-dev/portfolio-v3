@@ -1,7 +1,7 @@
 import { ISVGProps } from '../interfaces/svg-props.interface'
 
 export const LinkedinIcon = ({
-  color = 'none',
+  color = 'white',
   width,
   height,
 }: ISVGProps): JSX.Element => {

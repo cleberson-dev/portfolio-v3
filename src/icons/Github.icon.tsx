@@ -1,7 +1,7 @@
 import { ISVGProps } from '../interfaces/svg-props.interface'
 
 export const GithubIcon = ({
-  color = 'none',
+  color = 'white',
   width,
   height,
 }: ISVGProps): JSX.Element => {
