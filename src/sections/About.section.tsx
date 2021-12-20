@@ -1,5 +1,11 @@
 import profilePhoto from '../assets/profile.jpeg'
 
+const features = [
+  { name: 'Escolaridade', value: 'Eng. da Computação' },
+  { name: 'Idade', value: '23 anos' },
+  { name: 'Nacionalidade', value: 'Brasileiro' },
+]
+
 export const AboutSection = () => {
   return (
     <div>
@@ -33,24 +39,17 @@ export const AboutSection = () => {
         </p>
       </div>
       <div className="flex justify-end mt-20">
-        <p className="text-right font-bold">
-          <span className="text-black opacity-30 text-sm uppercase block">
-            Escolaridade
-          </span>
-          <span className="font-bold text-2xl">Eng. da Computação</span>
-        </p>
-        <p className="text-right font-bold ml-16">
-          <span className="text-black opacity-30 text-sm uppercase block">
-            Idade
-          </span>
-          <span className="font-bold text-2xl">23 anos</span>
-        </p>
-        <p className="text-right font-bold ml-16">
-          <span className="text-black opacity-30 text-sm uppercase block">
-            Nacionalidade
-          </span>
-          <span className="font-bold text-2xl">Brasileiro</span>
-        </p>
+        {features.map((feature) => (
+          <p
+            key={feature.name + feature.value}
+            className="text-right font-bold ml-16"
+          >
+            <span className="text-black opacity-30 text-sm uppercase block">
+              {feature.name}
+            </span>
+            <span className="font-bold text-2xl">{feature.value}</span>
+          </p>
+        ))}
       </div>
     </div>
   )
