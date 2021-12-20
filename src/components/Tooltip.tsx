@@ -12,7 +12,7 @@ export const Tooltip = ({ label }: TooltipProps): JSX.Element => {
   return (
     <div
       style={styles}
-      className="tooltip relative rounded-sm py-2 px-6 text-white font-normal w-max"
+      className="tooltip relative rounded py-2 px-6 text-white font-normal w-max"
     >
       {label}
     </div>

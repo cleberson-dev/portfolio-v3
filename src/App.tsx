@@ -1,4 +1,5 @@
 import { Header } from './components/Header'
+import { AboutSection } from './sections/About.section'
 import { MainSection } from './sections/Main.section'
 import { SkillsSection } from './sections/Skills.section'
 
@@ -8,6 +9,7 @@ function App(): JSX.Element {
       <Header />
       <MainSection />
       <SkillsSection />
+      <AboutSection />
     </div>
   )
 }
