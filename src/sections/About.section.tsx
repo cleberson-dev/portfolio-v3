@@ -6,6 +6,21 @@ const features = [
   { name: 'Nacionalidade', value: 'Brasileiro' },
 ]
 
+type FeatureProps = {
+  name: string
+  value: string
+}
+const Feature = ({ name, value }: FeatureProps): JSX.Element => {
+  return (
+    <p className="text-right font-bold ml-16">
+      <span className="text-black opacity-30 text-sm uppercase block">
+        {name}
+      </span>
+      <span className="font-bold text-2xl">{value}</span>
+    </p>
+  )
+}
+
 export const AboutSection = () => {
   return (
     <div>
@@ -40,15 +55,7 @@ export const AboutSection = () => {
       </div>
       <div className="flex justify-end mt-20">
         {features.map((feature) => (
-          <p
-            key={feature.name + feature.value}
-            className="text-right font-bold ml-16"
-          >
-            <span className="text-black opacity-30 text-sm uppercase block">
-              {feature.name}
-            </span>
-            <span className="font-bold text-2xl">{feature.value}</span>
-          </p>
+          <Feature key={feature.name + feature.value} {...feature} />
         ))}
       </div>
     </div>
