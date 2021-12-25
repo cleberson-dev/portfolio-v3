@@ -6,9 +6,12 @@ import { SkillsSection } from './sections/Skills.section'
 
 function App(): JSX.Element {
   return (
-    <div className="min-h-screen text-white text-sm px-28 py-20">
-      <Header />
-      <MainSection />
+    <div className="text-white text-sm px-28 py-20">
+      <div className="h-screen flex flex-col justify-between">
+        <Header />
+        <MainSection />
+        <div className="h-32"></div>
+      </div>
       <SkillsSection />
       <AboutSection />
       <ProjectsSection />
