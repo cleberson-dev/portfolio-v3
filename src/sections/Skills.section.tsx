@@ -60,7 +60,7 @@ const icons = {
   webpack: WebpackIcon,
 }
 
-export const SkillsSection = () => {
+export const SkillsSection = (): JSX.Element => {
   const [skills, setSkills] = useState([
     {
       id: 1,

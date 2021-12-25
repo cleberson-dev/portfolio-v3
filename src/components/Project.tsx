@@ -9,7 +9,6 @@ export const Project = ({
   cover,
   name,
   description,
-  techs,
 }: ProjectProps): JSX.Element => {
   return (
     <div className="w-64">

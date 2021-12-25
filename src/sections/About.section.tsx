@@ -21,7 +21,7 @@ const Feature = ({ name, value }: FeatureProps): JSX.Element => {
   )
 }
 
-export const AboutSection = () => {
+export const AboutSection = (): JSX.Element => {
   return (
     <div>
       <h1 className="font-bold text-3xl lowercase">Sobre mim</h1>

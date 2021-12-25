@@ -11,7 +11,7 @@ const projects = [
   },
 ]
 
-export const ProjectsSection = () => {
+export const ProjectsSection = (): JSX.Element => {
   return (
     <section>
       <h1 className="font-bold text-3xl lowercase">Projects</h1>
