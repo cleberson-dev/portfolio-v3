@@ -9,9 +9,9 @@ const navbar = [
 ]
 
 const socials: SocialMediaProps[] = [
-  { type: 'github', link: '' },
-  { type: 'linkedin', link: '' },
-  { type: 'instagram', link: '' },
+  { type: 'github', link: 'https://github.com/cleberson-dev' },
+  { type: 'linkedin', link: 'https://www.linkedin.com/in/clebersondev/' },
+  { type: 'instagram', link: 'https://www.instagram.com/cleberson.jr/' },
 ]
 
 export const Header = (): JSX.Element => {
