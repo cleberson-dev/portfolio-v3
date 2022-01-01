@@ -4,6 +4,8 @@ import { AboutSection } from '../sections/About.section'
 import { MainSection } from '../sections/Main.section'
 import { ProjectsSection } from '../sections/Projects.section'
 import { SkillsSection } from '../sections/Skills.section'
+import socials from '../data/socials.json'
+import { SociaMedia } from '../components/SocialMedia'
 
 function HomePage(): JSX.Element {
   return (
@@ -15,7 +17,11 @@ function HomePage(): JSX.Element {
         <div className="h-screen flex flex-col justify-between">
           <Header />
           <MainSection />
-          <div className="h-32"></div>
+          <div className="flex -ml-4 mb-28 justify-center lg:invisible lg:h-32">
+            {socials.map((social) => (
+              <SociaMedia key={social.type} {...social} />
+            ))}
+          </div>
         </div>
         <SkillsSection />
         <AboutSection />
