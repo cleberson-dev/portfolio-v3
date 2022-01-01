@@ -1,17 +1,12 @@
 import { Logo } from './Logo'
 import { Navbar } from './Navbar'
-import { SocialMediaProps, SociaMedia } from './SocialMedia'
+import { SociaMedia } from './SocialMedia'
+import socials from '../data/socials.json'
 
 const navbar = [
   { link: '#', title: 'sobre mim' },
   { link: '#', title: 'techs' },
   { link: '#', title: 'projetos' },
-]
-
-const socials: SocialMediaProps[] = [
-  { type: 'github', link: 'https://github.com/cleberson-dev' },
-  { type: 'linkedin', link: 'https://www.linkedin.com/in/clebersondev/' },
-  { type: 'instagram', link: 'https://www.instagram.com/cleberson.jr/' },
 ]
 
 export const Header = (): JSX.Element => {

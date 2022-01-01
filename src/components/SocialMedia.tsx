@@ -1,11 +1,10 @@
 import { GithubIcon } from '../icons/Github.icon'
 import { InstagramIcon } from '../icons/Instagram.icon'
 import { LinkedinIcon } from '../icons/Linkedin.icon'
-
-type SocialMediaTypes = 'github' | 'linkedin' | 'instagram'
+import { ISVGProps } from '../interfaces/svg-props.interface'
 
 export type SocialMediaProps = {
-  type: SocialMediaTypes
+  type: string
   link?: string
 }
 
@@ -17,7 +16,7 @@ export const SociaMedia = ({
     github: GithubIcon,
     instagram: InstagramIcon,
     linkedin: LinkedinIcon,
-  }[type]
+  }[type] as (_: ISVGProps) => JSX.Element
 
   const iconSize = '28px'
   const defaultProps = {
