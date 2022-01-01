@@ -10,11 +10,11 @@ type FeatureProps = {
 }
 const Feature = ({ name, value }: FeatureProps): JSX.Element => {
   return (
-    <p className="text-right font-bold ml-16">
-      <span className="text-black opacity-30 text-sm uppercase block">
+    <p className="text-right font-bold mb-4 lg:ml-16">
+      <span className="text-black opacity-30 uppercase block text-xs lg:text-sm">
         {name}
       </span>
-      <span className="font-bold text-2xl">{value}</span>
+      <span className="font-bold text-lg lg:text-2xl">{value}</span>
     </p>
   )
 }
@@ -22,14 +22,14 @@ const Feature = ({ name, value }: FeatureProps): JSX.Element => {
 export const AboutSection = (): JSX.Element => {
   return (
     <div>
-      <h1 className="font-bold text-3xl lowercase">Sobre mim</h1>
-      <div className="flex items-center mt-14">
+      <h1 className="font-bold text-xl lg:text-3xl lowercase">Sobre mim</h1>
+      <div className="flex flex-col lg:flex-row items-center mt-14">
         <img
           src="/img/profile.jpeg"
           alt="Foto de perfil"
-          className="rounded-full w-64 h-64 object-cover mr-20"
+          className="rounded-full w-48 h-48 object-cover mb-8 lg:w-64 lg:h-64 lg:mr-20 lg:mb-0"
         />
-        <p className="text-base">
+        <p className="text-sm lg:text-base">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lacus
           at urna imperdiet egestas nec dignissim massa. Vivamus semper rutrum
           consequat. Aliquam ac magna suscipit, rhoncus ligula ac, faucibus
@@ -51,7 +51,7 @@ export const AboutSection = (): JSX.Element => {
           nec molestie.
         </p>
       </div>
-      <div className="flex justify-end mt-20">
+      <div className="flex flex-col justify-end flex-wrap my-8 lg:flex-row lg:mt-20 lg:mb-0">
         {features.map((feature) => (
           <Feature key={feature.name + feature.value} {...feature} />
         ))}

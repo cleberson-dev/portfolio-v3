@@ -159,7 +159,7 @@ export const SkillsSection = (): JSX.Element => {
   }
   return (
     <section className="h-screen">
-      <h1 className="lowercase font-bold text-3xl">Minhas Techs</h1>
+      <h1 className="lowercase font-bold text-xl lg:text-3xl">Minhas Techs</h1>
       <ul className="flex mt-28 flex-wrap justify-between">
         {skills.map(({ id, Icon, label, link, hovered, hoverColor }) => (
           <li key={label} className="relative">

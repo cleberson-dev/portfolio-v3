@@ -11,10 +11,10 @@ const navbar = [
 
 export const Header = (): JSX.Element => {
   return (
-    <header className="flex justify-between items-center">
+    <header className="flex justify-center items-center lg:justify-between">
       <Logo />
       <Navbar items={navbar} />
-      <div className="flex">
+      <div className="hidden lg:flex">
         {socials.map((social) => (
           <SociaMedia key={social.type} {...social} />
         ))}

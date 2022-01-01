@@ -9,7 +9,7 @@ type NavbarProps = {
 
 export const Navbar = ({ items }: NavbarProps): JSX.Element => {
   return (
-    <nav>
+    <nav className="hidden lg:block">
       {items.map((item) => (
         <NavbarItem key={item.link} {...item} />
       ))}

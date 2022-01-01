@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react'
 
 const classes = {
   container: '',
-  title: 'text-7xl font-bold text-left',
-  description: 'text-4xl font-medium mt-8',
+  title: 'text-4xl lg:text-7xl font-bold text-left',
+  description: 'text-lg font-medium mt-4 lg:mt-8 lg:text-4xl',
   input: [
-    'font-bold max-w-md bg-transparent',
+    'font-bold w-48 lg:max-w-md bg-transparent',
     'focus-within:outline-none',
     'border-b-4 border-white border-solid',
   ].join(' '),
@@ -28,7 +28,7 @@ export const MainSection = (): JSX.Element => {
           type="text"
           className={classes.input}
           style={pinkTextStyles}
-        />{' '}
+        />
         !
       </h1>
       <p className={classes.description}>

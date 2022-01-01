@@ -11,7 +11,7 @@ function HomePage(): JSX.Element {
       <Head>
         <title>cleberson.dev</title>
       </Head>
-      <div className="text-white text-sm px-28 py-20">
+      <div className="text-white text-sm px-4 py-6 lg:px-28 lg:py-20">
         <div className="h-screen flex flex-col justify-between">
           <Header />
           <MainSection />

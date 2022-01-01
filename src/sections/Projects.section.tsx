@@ -14,7 +14,7 @@ const projects = [
 export const ProjectsSection = (): JSX.Element => {
   return (
     <section>
-      <h1 className="font-bold text-3xl lowercase">Projects</h1>
+      <h1 className="font-bold lowercase text-xl lg:text-3xl">Projects</h1>
 
       <div className="grid grid-cols-3 gap-x-3 mt-20">
         <Project {...projects[0]} />
