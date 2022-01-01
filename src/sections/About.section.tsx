@@ -1,5 +1,3 @@
-import profilePhoto from '../assets/profile.jpeg'
-
 const features = [
   { name: 'Escolaridade', value: 'Eng. da Computação' },
   { name: 'Idade', value: '23 anos' },
@@ -27,7 +25,7 @@ export const AboutSection = (): JSX.Element => {
       <h1 className="font-bold text-3xl lowercase">Sobre mim</h1>
       <div className="flex items-center mt-14">
         <img
-          src={profilePhoto}
+          src="/img/profile.jpeg"
           alt="Foto de perfil"
           className="rounded-full w-64 h-64 object-cover mr-20"
         />

@@ -1,0 +1,34 @@
+{
+  "navbar": [
+    { "label": "sobre mim", "link": "#" },
+    { "label": "techs", "link": "#" },
+    { "label": "projetos", "link": "#" }
+  ],
+  "greeting": "Olá",
+  "presentation": ["Meu nome é", "e desenvolvo para"],
+  "sections": {
+    "techs": {
+      "title": "techs"
+    },
+    "about": {
+      "title": "sobre mim",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lacus at urna imperdiet egestas nec dignissim massa. Vivamus semper rutrum consequat. Aliquam ac magna suscipit, rhoncus ligula ac, faucibus lorem. In sed lectus efficitur, congue nulla eu, scelerisque felis. Aenean ornare mi orci, ac laoreet justo rhoncus vitae. Quisque et viverra odio. Nunc vel neque finibus, fermentum lectus ac, molestie justo. Mauris elementum augue eu mi pellentesque, id mattis sapien finibus. Mauris sit amet lacus interdum, egestas quam in, lobortis mauris. Cras tempor fermentum dignissim.\nFusce consectetur, augue sed ornare congue, felis nisl laoreet elit, blandit pellentesque enim nibh id augue. Etiam sed imperdiet mauris, ac facilisis est. Nam tempor ante non maximus ullamcorper. Mauris dapibus odio sed porttitor efficitur. Sed sagittis tempor venenatis. Nullam sed fermentum nisi, quis dictum nibh. Etiam viverra enim odio, pretium pulvinar nibh tempus posuere. Etiam placerat felis id libero tincidunt gravida. Proin in enim ultricies, ornare mauris eu, semper augue. Suspendisse quis quam vehicula, aliquet augue quis, sodales neque. Nullam sed iaculis quam, vitae malesuada metus. Vestibulum venenatis tempus purus nec molestie.",
+      "features": [
+        { "name": "Escolaridade", "value": "Eng. da Computação" },
+        { "name": "Idade", "value": "23 anos" },
+        { "name": "Nacionalidade", "value": "Brasileiro" }
+      ]
+    },
+    "projects": {
+      "title": "projetos",
+      "items": [
+        {
+          "name": "Poll It",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lacus at urna imperdiet egestas nec dignissim massa. Vivamus semper rutrum consequat.",
+          "cover": "",
+          "live": ""
+        }
+      ]
+    }
+  }
+}
