@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Tooltip } from '../components/Tooltip'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 import {
   AngularIcon,
   CSSIcon,
@@ -157,10 +158,14 @@ export const SkillsSection = (): JSX.Element => {
       )
     )
   }
+
+  const { width } = useWindowDimensions()
+  const iconSize = width >= 1024 ? '80px' : '41px'
+
   return (
-    <section className="h-screen">
+    <section className="h-screen pb-20 lg:pb-0 flex flex-col justify-between lg:justify-start">
       <h1 className="lowercase font-bold text-xl lg:text-3xl">Minhas Techs</h1>
-      <ul className="flex mt-28 flex-wrap justify-between">
+      <ul className="grid grid-cols-5 gap-4 lg:grid-cols-10 mt-8 lg:mt-28 lg:justify-between">
         {skills.map(({ id, Icon, label, link, hovered, hoverColor }) => (
           <li key={label} className="relative">
             <div
@@ -177,14 +182,15 @@ export const SkillsSection = (): JSX.Element => {
               onMouseLeave={() => leaveSkill(id)}
             >
               <Icon
-                width="80px"
-                height="80px"
+                width={iconSize}
+                height={iconSize}
                 color={hovered ? hoverColor : 'white'}
               />
             </a>
           </li>
         ))}
       </ul>
+      <div className="h-20 lg:hidden"></div>
     </section>
   )
 }
