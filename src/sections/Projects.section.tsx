@@ -16,7 +16,9 @@ export const ProjectsSection = (): JSX.Element => {
     <section>
       <h1 className="font-bold lowercase text-xl lg:text-3xl">Projects</h1>
 
-      <div className="grid grid-cols-3 gap-x-3 mt-20">
+      <div className="grid grid-cols-1 gap-y-12 justify-items-center lg:grid-cols-3 gap-x-3 mt-20">
+        <Project {...projects[0]} />
+        <Project {...projects[0]} />
         <Project {...projects[0]} />
       </div>
     </section>
