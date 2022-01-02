@@ -1,4 +1,6 @@
+import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
+import { getTranslatedContent } from '../utils'
 
 const classes = {
   container: '',
@@ -14,6 +16,9 @@ const classes = {
 const pinkTextStyles = { color: '#F72585' }
 
 export const MainSection = (): JSX.Element => {
+  const { locale } = useRouter()
+  const content = getTranslatedContent(locale)
+
   const nameInputRef = useRef<HTMLInputElement>(null)
   useEffect(() => {
     nameInputRef.current?.focus()
@@ -22,7 +27,7 @@ export const MainSection = (): JSX.Element => {
   return (
     <main className={classes.container}>
       <h1 className={classes.title}>
-        Olá,{' '}
+        {content.greeting},{' '}
         <input
           ref={nameInputRef}
           type="text"
@@ -32,8 +37,9 @@ export const MainSection = (): JSX.Element => {
         !
       </h1>
       <p className={classes.description}>
-        Meu nome é <span style={pinkTextStyles}>Cleberson Jr.</span> e
-        desenvolvo para a <span style={pinkTextStyles}>web</span>.
+        {content.presentation[0]}{' '}
+        <span style={pinkTextStyles}>Cleberson Jr.</span>{' '}
+        {content.presentation[1]} <span style={pinkTextStyles}>web</span>.
       </p>
     </main>
   )
