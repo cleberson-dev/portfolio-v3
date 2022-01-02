@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { Tooltip } from '../components/Tooltip'
 import useWindowDimensions from '../hooks/useWindowDimensions'
@@ -30,6 +31,7 @@ import {
   VueIcon,
   WebpackIcon,
 } from '../icons'
+import { getTranslatedContent } from '../utils'
 
 const icons = {
   angular: AngularIcon,
@@ -62,6 +64,10 @@ const icons = {
 }
 
 export const SkillsSection = (): JSX.Element => {
+  const { locale } = useRouter()
+  const content = getTranslatedContent(locale)
+  const { techs: section } = content.sections
+
   const [skills, setSkills] = useState([
     {
       id: 1,
@@ -164,7 +170,9 @@ export const SkillsSection = (): JSX.Element => {
 
   return (
     <section className="h-screen pb-20 lg:pb-0 flex flex-col justify-between lg:justify-start">
-      <h1 className="lowercase font-bold text-xl lg:text-3xl">Minhas Techs</h1>
+      <h1 className="lowercase font-bold text-xl lg:text-3xl">
+        {section.title}
+      </h1>
       <ul className="grid grid-cols-5 gap-4 lg:grid-cols-10 mt-8 lg:mt-28 lg:justify-between">
         {skills.map(({ id, Icon, label, link, hovered, hoverColor }) => (
           <li key={label} className="relative">
