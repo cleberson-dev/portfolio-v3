@@ -5,6 +5,10 @@ type ProjectProps = {
   name: string
   description: string
   techs: AvailableTechs[]
+  links: {
+    demo: string
+    repo: string
+  }
 }
 
 export const Project = ({
@@ -12,9 +16,10 @@ export const Project = ({
   name,
   description,
   techs,
+  links,
 }: ProjectProps): JSX.Element => {
   return (
-    <div className="flex flex-col items-center lg:block w-64">
+    <div className="flex flex-col items-center lg:block w-96 bg-white text-black py-6 px-10 rounded-md">
       <img
         src={cover}
         alt="Project cover"
@@ -39,6 +44,18 @@ export const Project = ({
               height="30px"
             />
           </div>
+        ))}
+      </div>
+      <div className="grid grid-cols-2 gap-x-2">
+        {Object.entries(links).map(([type, link]) => (
+          <a
+            key={link}
+            href={link}
+            className="text-white text-center text-base uppercase w-full py-1 px-2"
+            style={{ backgroundColor: '#10002B' }}
+          >
+            {type}
+          </a>
         ))}
       </div>
     </div>

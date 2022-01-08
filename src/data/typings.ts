@@ -19,11 +19,16 @@ export interface IData {
       }[]
     }>
     projects: Section<{
+      techs: any[]
       items: {
+        id: number
         name: string
         description: string
         cover: string
-        live: string
+        links: {
+          demo: string
+          repo: string
+        }[]
       }[]
     }>
   }

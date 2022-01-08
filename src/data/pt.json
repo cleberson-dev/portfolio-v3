@@ -20,13 +20,18 @@
       ]
     },
     "projects": {
+      "id": 1,
       "title": "projetos",
       "items": [
         {
           "name": "Poll It",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lacus at urna imperdiet egestas nec dignissim massa. Vivamus semper rutrum consequat.",
           "cover": "",
-          "live": ""
+          "techs": [],
+          "links": {
+            "demo": "#",
+            "repo": "#"
+          }
         }
       ]
     }
