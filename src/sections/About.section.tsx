@@ -32,7 +32,10 @@ export const AboutSection = (): JSX.Element => {
           alt="Foto de perfil"
           className="rounded-full w-48 h-48 object-cover mb-8 lg:w-64 lg:h-64 lg:mr-20 lg:mb-0"
         />
-        <p className="text-sm lg:text-base">{section.description}</p>
+        <p
+          className="text-sm lg:text-base"
+          dangerouslySetInnerHTML={{ __html: section.description }}
+        />
       </div>
       <div className="flex flex-col justify-end flex-wrap my-8 lg:flex-row lg:mt-20 lg:mb-0">
         {section.features.map((feature) => (
