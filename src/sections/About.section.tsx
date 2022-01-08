@@ -33,7 +33,7 @@ export const AboutSection = (): JSX.Element => {
           className="rounded-full w-48 h-48 object-cover mb-8 lg:w-64 lg:h-64 lg:mr-20 lg:mb-0"
         />
         <p
-          className="text-sm lg:text-base"
+          className="text-sm lg:text-lg"
           dangerouslySetInnerHTML={{ __html: section.description }}
         />
       </div>
