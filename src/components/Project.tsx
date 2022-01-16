@@ -52,7 +52,7 @@ export const Project = ({
           <a
             key={link}
             href={link}
-            className="text-white text-center text-base uppercase w-full py-1 px-2 hover:"
+            className="text-white text-center text-base uppercase w-full py-1 px-2 hover:opacity-80"
             style={{ backgroundColor: '#10002B' }}
           >
             {type}
