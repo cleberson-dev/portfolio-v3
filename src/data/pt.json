@@ -24,9 +24,19 @@
       "title": "projetos",
       "items": [
         {
+          "name": "One Post",
+          "description": "Rede social com a postagem e visualização de posts em um feed único. <br /> Tipagem estática com Typescript, containzerização com Docker, autenticação e autorização com JWT.",
+          "cover": "https://unsplash.com/photos/60GsdOMRFGc/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQyNjU4MTM1&force=true&w=640",
+          "techs": [],
+          "links": {
+            "demo": "#",
+            "repo": "https://github.com/cleberson-dev/onepost"
+          }
+        },
+        {
           "name": "Poll It",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lacus at urna imperdiet egestas nec dignissim massa. Vivamus semper rutrum consequat.",
-          "cover": "",
+          "description": "Você pode criar, visualizar e votar em enquetes. <br /> Exibindo os resultados, compartilhando-os por links. <br /> Aplicação híbrida, construída com React Native, Typescript e Tailwind CSS.",
+          "cover": "https://unsplash.com/photos/1UY8UuUkids/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQyNjU4MTAw&force=true&w=640",
           "techs": [],
           "links": {
             "demo": "#",

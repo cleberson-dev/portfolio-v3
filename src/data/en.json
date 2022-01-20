@@ -24,9 +24,19 @@
       "title": "projects",
       "items": [
         {
-          "name": "Poll It",
+          "name": "One Post",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lacus at urna imperdiet egestas nec dignissim massa. Vivamus semper rutrum consequat.",
           "cover": "https://unsplash.com/photos/MOdegvor9kw/download?ixid=MnwxMjA3fDB8MXxhbGx8MTB8fHx8fHwyfHwxNjQxNjUyMjA0&force=true&w=640",
+          "techs": [],
+          "links": {
+            "demo": "#",
+            "repo": "#"
+          }
+        },
+        {
+          "name": "Poll It",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lacus at urna imperdiet egestas nec dignissim massa. Vivamus semper rutrum consequat.",
+          "cover": "",
           "techs": [],
           "links": {
             "demo": "#",
