@@ -25,7 +25,12 @@ export const SociaMedia = ({
     height: iconSize,
   }
   return (
-    <a href={link} target="_blank" rel="noreferrer noopener" className="ml-4">
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer noopener"
+      className="ml-4 hover:opacity-50"
+    >
       <Icon {...defaultProps} />
     </a>
   )
